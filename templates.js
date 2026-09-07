@@ -8,7 +8,7 @@ function displayPhotoThumbnail(photoIndex, photoId, photoSrc, photoAlt) {
             id="${photoId}"
             src="${photoSrc}"
             alt="${photoAlt}"
-        />`;
+        >`;
 }
 
 function displayPhotoOverlay(currentPhotoIndex, photoSrc, photoAlt, photoDescription, photoCopyright, photoNr) {
