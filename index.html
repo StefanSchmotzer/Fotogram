@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stefans Impressionen seit 2010</title>
+
+    <link type="image/x-icon" rel="icon" href="./assets/icons/logo-fotogram.svg">
+    <link rel="icon" type="image/x-icon" href="assets/icons/fotogram.svg" alt="Stefans Fotogram icon">
+    <link type="text/css" rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="fonts.css">
+
+</head>
+
+<body onload="init()">
+    <header class="PositionFixedHeader">
+        <div class="PaddingLeftRight ContainerHeaderFooter">
+            <a class="HeaderLinks" href="./index.html">
+                <img class="HeaderLogo" src="./assets/icons/fotogram.svg" alt="Fotogram Logo" />
+                Fotogram
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="ContentLimitation ContainerH1">
+            <h1 class="HideMobile410 PaddingLeftRight">impressions by Stefan</h1>
+            <h1 class="ShowMobile410 PaddingLeftRight">impressions by Stefan</h1>
+        </div>
+        <div class="PaddingLeftRight ContentLimitation MainContainerPhotoGallery">
+            <section class="SectionPhotoGallery">
+                <h2>since 2010</h2>
+                <!-- Container-id must be identical to foldername AND key in photos.js-file !! -->
+                <div class="ImageContainerPhotoGallery" id="all-impressions">
+                </div>
+            </section>
+        </div>
+
+        <dialog id="#DialogPhotoOverlay" closedby="any">
+            <div class="ContainerDialog" id="#PhotoOverlay">
+            </div>
+        </dialog>
+    </main>
+
+    <footer class="footer-section">
+                <aside class="footer-center">
+                    <th>
+                        <h3 class="developer-akademie">
+                            <img src="./assets/icons/developer-akademie.svg"
+                                alt="developer akademie icon">Developer<br>Akademie
+                        </h3>
+                        <img src="./assets/icons/©-2023-developer-akademie.png" alt="© 2023 Developer Akademie GmbH">
+                    </th>
+                </aside>
+            </footer>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="./photos.js"></script>
+    <script type="text/javascript" src="./templates.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+
+</html>

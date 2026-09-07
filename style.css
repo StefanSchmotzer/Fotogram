@@ -1,0 +1,436 @@
+:root {
+
+    --color-dark: #09212A;
+    --color-light: #00f7ff;
+    --color-font: #ffffff;
+    --color-font-soft: #ffffff80;
+    --shadow: 0px 0px 8px var(--color-light);
+    --shadow-big: 0px 0px 12px var(--color-light);
+    --border-radius-small: 24px 24px;
+    --border-radius-small-reverse: 8px 8px;
+    --border-radius-big: 80px 80px;
+    --dialog-spacing: 98%;
+}
+
+/* css -> focus and hover */
+
+:focus-visible {
+    outline: none;
+}
+
+a:hover,
+a:focus-visible,
+button:hover, 
+button:focus-visible {
+    filter: drop-shadow(var(--shadow)); 
+    text-shadow: var(--shadow);
+}
+
+a:active,
+button:active {
+    font-weight: 500;
+    color: var(--color-dark);
+    filter: drop-shadow(var(--shadow-big)); 
+    
+}
+
+.ImagePhotoGallery:hover,
+.ImagePhotoGallery:focus-visible {
+    border: 1px solid var(--color-light);
+    filter: drop-shadow(var(--shadow));
+}
+
+.ImagePhotoGallery:active {
+    filter: drop-shadow(var(--shadow-big)); 
+}
+
+/* css -> general */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-dark);
+    font-family: 'Figtree', sans-serif;
+    font-weight: 300;
+    color: var(--color-font);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.ContentLimitation {
+    max-width: 1280px;
+}
+
+.PaddingLeftRight {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+a {
+    font-family: 'Playpen Sans Hebrew';
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    font-size: 32px;
+    padding: 24px 0;
+}
+
+h2 {
+    font-size: 24px;
+    padding: 16px;
+}
+
+h3 {
+    font-size: 20px;
+    padding: 8px;
+}
+
+.ShowMobile700 {
+    display: none;
+}
+
+.ShowMobile410 {
+    display: none;
+}
+
+/* github icon: 25% padding needed */
+.LogosIcons {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    height: 32px;
+}
+
+button {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    margin: 0 8px;
+    border: none;
+    border-radius: var(--border-radius-small);
+    cursor: pointer;
+}
+
+.ButtonReverse {
+    border-radius: var(--border-radius-small-reverse);
+}
+
+button img {
+    height: 24px;
+}
+
+/* css -> header and footer */
+
+header {
+    background-color: #06171E;
+    display: flex;
+    justify-content: center;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: 4px solid var(--color-light);
+    border-top: none;
+    filter: drop-shadow(var(--shadow));
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.PositionFixedHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.PositionFixedFooter {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.ContainerHeaderFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    max-width: 1780px;
+}
+
+.HeaderLinks {
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.HeaderLogo {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 8px;
+    height: 36px;
+}
+
+.ChildContainerFooter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.Width135 {
+    width: 135px;
+}
+
+/* css -> main */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+.ContainerH1 {
+    background-color: var(--color-dark);
+    display: flex;
+    justify-content: center;
+}
+
+.MainContainerPhotoGallery {
+    display: flex;
+    gap: 24px;
+}
+
+.SectionPhotoGallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ImageContainerPhotoGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.ImagePhotoGallery {
+    cursor: pointer;
+    border: 1px solid var(--color-font-soft);
+    border-radius: var(--border-radius-small);
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+}
+
+/* css -> overlay */
+
+dialog {
+    background-color: var(--color-dark);
+    color: var(--color-font);
+    justify-self: center;
+    align-self: center;
+    margin: 0;
+    border: 1px solid var(--color-light);
+    border-radius: var(--border-radius-big);
+    filter: drop-shadow(var(--shadow));
+    padding: 0;
+    width: 90%;
+    max-width: 1780px;
+    height: calc(100% - 110px);
+}
+
+.ContainerDialog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+dialog header {
+    align-items: center;
+    width: var(--dialog-spacing);
+}
+
+dialog h3 {
+    flex: 1;
+}
+.footer-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 10240px;
+    height: 128px;
+    background-color: #06171E;
+    border: none;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-top: 3px groove #FD5B4F;
+    box-shadow: -8px -8px 32px #ffffff,
+        -2px -2px 12px #ffffff,
+        -2px -2px 8px #FD5B4F;
+    gap: 8px;
+    font-family: 'Playpen Sans Hebrew';
+    font-size: 2rem;
+    color: #ffffff;
+}
+.footer-center {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    text-align: center;
+
+}
+.developer-akademie {
+    display: flex;
+    justify-self: center;
+    text-align: center;
+    gap: 8px;
+    padding-inline: 46px;
+    padding-bottom: 16px;
+    font-family: 'figtree';
+    font-size: 1rem;
+}
+dialog footer {
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    width: var(--dialog-spacing);
+    background-color: #09212A;
+    border-radius: 5%;
+    border: 8px groove #FD5B4F;
+    box-shadow: 1px 4px 16px #ffffff,
+        -2px -2px 12px #ffffff,
+        -2px -2px 8px #FD5B4F;
+}
+
+.developer-akademie {
+    display: flex;
+    justify-self: center;
+    text-align: center;
+    gap: 8px;
+    padding-inline: 46px;
+    padding-bottom: 16px;
+    font-family: 'figtree';
+    font-size: 1rem;
+}   
+
+    .figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin: 0;
+    width: 100%;
+    min-height: 0;
+}
+
+.figcaption {
+    font-size: 16px;
+}
+
+.ImagePhotoOverlay {
+    margin-bottom: 8px;
+    border-radius: var(--border-radius-small);
+    filter: drop-shadow(var(--shadow));
+    max-width: var(--dialog-spacing);
+    max-height: calc(100% - 50px); 
+}
+
+@media (max-width: 970px) {
+    .MainContainerPhotoGallery {
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 700px) {
+    .HideMobile700 {
+        display: none;
+    }
+
+    .ShowMobile700 {
+        display: block;
+    }
+
+    .ChildContainerFooter {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    dialog footer {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .PaddingLeftRight {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    
+    .HideMobile600 {
+        display: none;
+    }
+
+    .ShowMobile600 {
+        display: block;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .figcaption {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 410px) {
+    .PaddingLeftRight {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .HideMobile410 {
+        display: none;
+    }
+
+    .ShowMobile410 {
+        display: block;
+    }
+
+    .MobileLogosIcons {
+        height: 24px;
+    }
+
+    dialog footer {
+        gap: 16px;
+    }
+
+    button img {
+        height: 20px;
+    }
+}
