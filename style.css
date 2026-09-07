@@ -12,8 +12,6 @@
     --dialog-spacing: 98%;
 }
 
-/* css -> focus and hover */
-
 :focus-visible {
     outline: none;
 }
