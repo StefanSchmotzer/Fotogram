@@ -31,7 +31,7 @@ function displayPhotoOverlay(currentPhotoIndex, photoSrc, photoAlt, photoDescrip
         </figure>
         <footer id="#DialogFooter" 
             onkeyup="pressKeyArrow(event, ${currentPhotoIndex})" 
-            tabindex="-1">
+            tabindex="-1"/>
             <button onclick="renderPreviousPhotoOverlay(${currentPhotoIndex})"
                 class="ButtonReverse">
                 <img 

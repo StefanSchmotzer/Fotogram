@@ -227,7 +227,7 @@ main {
     object-fit: cover;
     width: 150px;
     height: 150px;
-    filter: brightness(25%);
+    filter: brightness(50%);
 }
 
 dialog {
@@ -299,13 +299,14 @@ dialog h3 {
 }
 
 dialog footer {
-    align-items: center;
+    display: flex;
+    align-items: center;                
     text-align: center;
     gap: 8px;
     width: var(--dialog-spacing);
     background-color: #09212A;
     border-radius: 5%;
-    border: 8px groove #FD5B4F;
+    border: 4px groove #FD5B4F;
     box-shadow: 1px 4px 16px #ffffff,
         -2px -2px 12px #ffffff,
         -2px -2px 8px #FD5B4F;
@@ -421,7 +422,8 @@ dialog footer {
     }
 
     dialog footer {
-        gap: 16px;
+        gap: 2px;
+        //*box-shadow: none;*/
     }
 
     button img {
