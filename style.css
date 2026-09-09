@@ -22,7 +22,6 @@ button:hover,
 button:focus-visible {
     filter: drop-shadow(var(--shadow));
     text-shadow: var(--shadow);
-    filter: brightness(100%);
 }
 
 a:active,
@@ -120,6 +119,7 @@ button {
     border: none;
     border-radius: var(--border-radius-small);
     cursor: pointer;
+
 }
 
 .ButtonReverse {
@@ -184,7 +184,9 @@ header {
 }
 
 .Width135 {
-    width: 100%;
+    display: flex;
+    align-items: end;
+    text-align: center;
 }
 
 main {
@@ -300,16 +302,15 @@ dialog h3 {
 
 dialog footer {
     display: flex;
-    align-items: center;                
+    align-items: end;
     text-align: center;
-    gap: 8px;
+    justify-content: center;
+    height: 40px;
+    gap: 50px;
     width: var(--dialog-spacing);
+    height: var(--dialog-spacing);
     background-color: #09212A;
-    border-radius: 5%;
-    border: 4px groove #FD5B4F;
-    box-shadow: 1px 4px 16px #ffffff,
-        -2px -2px 12px #ffffff,
-        -2px -2px 8px #FD5B4F;
+
 }
 
 .developer-akademie {
@@ -325,7 +326,7 @@ dialog footer {
 
 .figure {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     flex: 1;
@@ -335,6 +336,8 @@ dialog footer {
 }
 
 .figcaption {
+    display: flow-root;
+    justify-self: center;
     font-size: 16px;
 }
 
@@ -364,7 +367,7 @@ dialog footer {
 
     .ChildContainerFooter {
         flex-direction: column;
-        gap: 0;
+        gap: 0px;
     }
 
     dialog footer {
@@ -423,7 +426,6 @@ dialog footer {
 
     dialog footer {
         gap: 2px;
-        //*box-shadow: none;*/
     }
 
     button img {

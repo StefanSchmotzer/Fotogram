@@ -16,9 +16,7 @@ function displayPhotoOverlay(currentPhotoIndex, photoSrc, photoAlt, photoDescrip
         <header role="banner">
             <h3>${photoDescription}</h3>
             <button onclick="closeDialogPhotoOverlay()">
-                <img 
-                    src="./assets/icons/close.svg" 
-                    alt="X-Symbol to close the window">
+                <img src="./assets/icons/close.svg" alt="X-Symbol to close the window"/>
             </button>
         </header>
         <figure role="main">
@@ -31,7 +29,7 @@ function displayPhotoOverlay(currentPhotoIndex, photoSrc, photoAlt, photoDescrip
         </figure>
         <footer id="#DialogFooter" 
             onkeyup="pressKeyArrow(event, ${currentPhotoIndex})" 
-            tabindex="-1"/>
+            tabindex="-1">
             <button onclick="renderPreviousPhotoOverlay(${currentPhotoIndex})"
                 class="ButtonReverse">
                 <img 
